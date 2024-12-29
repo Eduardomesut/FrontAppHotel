@@ -1,0 +1,188 @@
+  /* General Styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.contenido {
+    /*background-image: url('./images/slider-1.jpg');*/
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #003580;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #003580;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #003580;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #003580;
+    color: white;
+    font-weight: normal;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Form Styles */
+.form-group {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #003580;
+}
+
+button {
+    background-color: #003580;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.searchHotels{
+    height: 30px;
+    margin: auto;
+    margin-left: 10px;
+}
+.divHoteles{
+    background-color: #0056b3;
+    width: 30%;
+    border-radius: 3%;
+    
+}
+.total{
+    display: flex;
+}
+.hide{
+    width: 50%;
+    border-radius: 5%;
+    margin-left: 10%;
+    background-image: url('/img/fondo\ hotel.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th, td {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .form-group label, .form-group input {
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+    }
+}
+.idUser{
+    justify-content: center;
+    margin-left: 5%;
+    color:#f8f8f8;
+}
+.infoExtra{
+    background-color: #00358057;
+}
+.imagentarjeta{
+    height: 60px;
+    margin-top: 5%;
+}
+.imagenbanner{
+    background-image: url('./images/slider-1.jpg');
+    background-image: url(./images/slider-1.jpg);
+    border-radius: 2%;
+    border: solid, 1px, lightpink;
+}
+.cajasRecompensa{
+    background-color: #333;
+    height: max-content;
+}

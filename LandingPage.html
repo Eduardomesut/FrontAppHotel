@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LandingPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">  
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>NH Hotels</title>
+    <style>
+        .weather-link {
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .weather-link:hover {
+            text-decoration: underline;
+        }
+
+        .github-login {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-left: auto;
+
+        }
+
+        .github-login:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="total">
+        <div class="home-slider owl-carousel js-fullheight">
+            <div class="slider-item js-fullheight" style="background-image:url('images/slider-1.jpg');">
+                <div class="overlay"></div>
+                <div class="nh-logo">
+                    <img src="img/nh.png" alt="NH Hotels Logo">
+                </div>
+                <div class="slider-text">
+                    <h2>Best Place to Travel</h2>
+                    <h1 class="mb-3">Norway</h1>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url('images/slider-2.jpg');">
+                <div class="overlay"></div>
+                <div class="nh-logo">
+                    <img src="img/nh.png" alt="NH Hotels Logo">
+                </div>
+                <div class="slider-text">
+                    <h2>Best Place to Travel</h2>
+                    <h1 class="mb-3">Japan</h1>
+                </div>
+            </div>
+            <div class="slider-item js-fullheight" style="background-image:url('images/slider-3.jpg');">
+                <div class="overlay"></div>
+                <div class="nh-logo">
+                    <img src="img/nh.png" alt="NH Hotels Logo">
+                </div>
+                <div class="slider-text">
+                    <h2>Best Place to Travel</h2>
+                    <h1 class="mb-3">Singapore</h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="welcomeSection" class="container-content">
+            <div class="left">
+                <h1>Bienvenido a NH Hotels</h1>
+                <p>Disfruta de la mejor experiencia de alojamiento.</p>
+                <img id="landingimg" src="./images/bg2.jpg" alt="">
+                <a onclick="weatherMode()" class="weather-link">Consultar el clima en tu destino.</a>
+            </div>
+            <div class="right">
+                <div id="loginForm">
+                    <h2>Iniciar Sesión</h2>
+                    <div class="form-group">
+                        <label for="loginEmail">Correo Electrónico</label>
+                        <input type="email" id="loginEmail" placeholder="Introduce tu correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Contraseña</label>
+                        <input type="password" id="loginPassword" placeholder="Introduce tu contraseña">
+                    </div>
+                    <div class="form-group">
+                        <button onclick="login()">Iniciar Sesión</button>
+                    </div>
+                    <div class="toggle" onclick="redirectToRegister()">¿No tienes cuenta? Regístrate</div>
+                    <a href="/oauth2/authorization/github" class="github-login">Iniciar sesión con GitHub</a>
+                </div>
+                <p class="admin" onclick="adminMode()">Modo Admin</p>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="LandingPage.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.home-slider').owlCarousel({
+                loop: true,
+                autoplay: true,
+                margin: 0,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                nav: true,
+                autoplayHoverPause: false,
+                items: 1,
+                navText: ["<span class='ion-md-arrow-back'></span>", "<span class='ion-chevron-right'></span>"],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+
+            $('.slider-item').on('click', function() {
+                document.getElementById('welcomeSection').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

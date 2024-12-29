@@ -1,0 +1,193 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.home-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 20px;
+    cursor: pointer; /* Add pointer cursor */
+}
+
+.total {
+    background-color: #333;
+}
+
+.slider-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.slider-text {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.slider-text h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    font-weight: 300;
+}
+
+.slider-text h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.nh-logo {
+    position: absolute;
+    
+    top: 20px; /* Adjust based on your layout */
+    left: 20px; /* Adjust based on your layout */
+    align-content: center;
+    z-index: 20;
+}
+
+.nh-logo img {
+    
+    height: 80px;
+}
+
+.container-content {
+    background-color: rgb(73, 65, 192);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 20px;
+    z-index: 20;
+    position: relative;
+    padding-top: 60px; /* Adjust for header offset */
+}
+
+.left, .right {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    background-color: rgb(73, 65, 192);;
+    color: white;
+    margin-bottom: 4%;
+}
+
+.left h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.left p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.right {
+    background-color: #fff;
+    color: #333;
+    border-radius: 4%;
+    margin-right: 5%;
+    margin-bottom: 6%;
+}
+
+.right h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+.toggle {
+    margin-top: 20px;
+    color: #007BFF;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.admin {
+    font-size: small;
+    color: #007BFF;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+#landingimg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.weather-link{
+    cursor: pointer;
+    
+}
+a{
+    margin-left: -170px;
+    margin-top: 5px;
+    
+}

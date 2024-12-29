@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <!-- Incluye jQuery y jQuery UI desde una CDN -->
+     <link rel="stylesheet" href="Usermenu.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    
+<div class="contenido">
+    <div class="imagenbanner">
+        <h1>Bienvenid@ <span id="nombreCli"></span></h1>
+        <div class="infoExtra">
+            <span class="idUser">Tu ID de cliente es: <span id="clienteId">123</span></span>
+            <span class="idUser">
+                Tu saldo es: <span id="clienteSaldo">0.00 €</span> €
+                <button id="addSaldoButton">Añadir Saldo</button>
+            </span>
+            <span class="idUser">
+                Tus puntos NH son: <span id="clientePuntos">0</span>
+                <button id="canjearPuntosButton">Canjear Puntos</button>
+            </span>
+        </div>
+    </div>
+        <div>
+        <h2>Información del Cliente</h2>
+        <table id="InfoCliente">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Dirección 2</th>
+                    <th>Estado</th>
+                    <th>País</th>
+                    <th>Código Postal</th>
+                    <th>Área</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+         </div>
+        <div class="total">
+            <div class="divHoteles">
+                <input type="text" id="searchHotel" class="searchHotels" placeholder="Buscar hotel...">
+                <button id="searchButton">Buscar</button>
+                <ul id="hotelList"></ul>
+            </div>
+            <div class="hide" hidden>
+                <p class="hotelName" id="hotelSeleccionado"></p>
+                <div class="form-group">
+                    <label for="fechaEntrada">Fecha de Entrada</label>
+                    <input type="text" id="fechaEntrada" placeholder="Selecciona la fecha de entrada">
+                </div>
+                <div class="form-group">
+                    <label for="fechaSalida">Fecha de Salida</label>
+                    <input type="text" id="fechaSalida" placeholder="Selecciona la fecha de salida">
+                </div>
+                <div class="form-group">
+                    <label for="habitacionesDisponibles">Habitaciones Disponibles</label>
+                    <select id="habitacionesDisponibles"></select>
+                </div>
+                <div class="form-group">
+                    <label for="idHabitacion">Número de Habitacion</label>
+                    <input type="text" id="idHabitacion" placeholder="Introduce el número de la habitación" readonly>
+                </div>
+            </div>
+        </div>
+        <button id="reserva" onclick="addReserva()">Añadir nueva reserva</button>
+        <button id="reservas" onclick="verReservas()">Ver las reservas realizadas</button>
+        
+        <h2 id="reservasRealizadasTitulo" style="display:none;">Reservas Realizadas</h2>
+        <table id="InfoReservas" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Nombre Hotel</th>
+
+                    <th>Fecha de Entrada</th>
+                    <th>Fecha de Salida</th>
+                    <th>Núm Habitación</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for Adding Balance -->
+    <div id="addSaldoModal" title="Añadir Saldo" style="display: none;">
+        <label for="saldoAmount">Cantidad:</label>
+        <input type="number" id="saldoAmount" min="0" step="0.01">
+        <img src="./img/tarjetas.png" alt="" class="imagentarjeta">
+    </div>
+
+    <!-- Modal for Redeeming Points -->
+    <div class="cajasRecompensa" id="recompensasModal" title="Canjear Puntos NH">
+        <ul id="recompensasList"></ul>
+    </div>
+
+    <!-- Modal for Confirming Purchase -->
+    <div id="confirmarCompraModal" title="Confirmar Compra" style="display: none;">
+        <p id="recompensaSeleccionada"></p>
+        
+    </div>
+
+    <div id="confirmarPagoModal" title="Confirmar Pago" style="display: none;">
+        <p id="confirmarPagoMensaje"></p>
+    </div>
+
+    <script src="Usermenu.js"></script>
+</body>
+</html>
